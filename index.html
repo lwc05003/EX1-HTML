@@ -14,6 +14,7 @@
             font-family: Arial, sans-serif;
             background-color: #f0f0f0;
             color: #333;
+            scroll-behavior: smooth;
         }
         .container {
             max-width: 900px;
@@ -22,14 +23,18 @@
             padding: 20px;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
         }
-        .center-text {
-            text-align: center;
-        }
         .top-links {
             text-align: center;
             font-size: 14px;
-            color: #888;
             margin-bottom: 10px;
+        }
+        .top-links a {
+            color: #ff6600;
+            text-decoration: none;
+            margin: 0 5px;
+        }
+        .top-links a:hover {
+            text-decoration: underline;
         }
         hr {
             margin: 15px 0;
@@ -58,6 +63,7 @@
         }
         .characters-section {
             margin: 40px 0;
+            scroll-margin-top: 20px;
         }
         .characters-section h2 {
             text-align: center;
@@ -100,6 +106,7 @@
             padding: 20px;
             margin: 30px 0;
             border-radius: 10px;
+            scroll-margin-top: 20px;
         }
         .favorite-section h3 {
             color: #ff6600;
@@ -157,71 +164,96 @@
             font-size: 12px;
             color: #888;
         }
+        footer a {
+            color: #ff6600;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+        /* Back to top button */
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #ff6600;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 14px;
+            display: none;
+        }
+        .back-to-top:hover {
+            background-color: #ff4400;
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <!-- ===== PDF Page 1 Top: Centered text ===== -->
+        <!-- Top navigation links - now with anchor links -->
         <div class="top-links">
-            Shinchan: Shiro and the Coal Town Game | Characters | Who's your favorite?
+            <a href="#game">Shinchan: Shiro and the Coal Town Game</a> |
+            <a href="#characters">Characters</a> |
+            <a href="#favorite">Who's your favorite?</a>
         </div>
         <hr>
 
-        <!-- ===== Title Section ===== -->
-        <h1>Shinchan: Shiro and the Coal Town</h1>
-        <div class="availability">(Available on: Nintendo Switch and Windows PC)</div>
+        <!-- Game Section (linked from top nav) -->
+        <section id="game">
+            <h1>Shinchan: Shiro and the Coal Town</h1>
+            <div class="availability">(Available on: Nintendo Switch and Windows PC)</div>
 
-        <!-- ===== Hero Image (PDF Page 1 shows an image here before the characters) ===== -->
-        <img class="hero-image" src="assets/_shin-chan-banner.jpg" alt="Shinchan Banner">
+            <!-- Hero Image -->
+            <img class="hero-image" src="assets/shin-chan-banner.jpg" alt="Shinchan Banner">
 
-        <!-- ===== Video Section (from your assets) ===== -->
-        <video controls poster="assets/_shinchan-coal-town-poster.jpg">
-            <source src="assets/_shinchan-and-the-coal-town.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
+            <!-- Video -->
+            <video controls poster="assets/shinchan-coal-town-poster.jpg">
+                <source src="assets/shinchan-and-the-coal-town.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </section>
 
-        <!-- ===== The Characters Section ===== -->
-        <section class="characters-section">
+        <!-- The Characters Section (linked from top nav) -->
+        <section id="characters" class="characters-section">
             <h2>The Characters</h2>
 
-            <!-- Row 1: Shinchan, Misae, Hiroshi -->
             <div class="character-row">
                 <div class="character-card">
-                    <img src="assets/_character-shinchan.png" alt="Shinchan">
+                    <img src="assets/character-shinchan.png" alt="Shinchan">
                     <h3>Shinnosuke Nohara</h3>
                     <div class="subtitle">(Shinchan)</div>
                     <p>The mischievous 5-year-old protagonist known for his hilarious antics and love of choco chips.</p>
                 </div>
                 <div class="character-card">
-                    <img src="assets/_character-misae.webp" alt="Misae">
+                    <img src="assets/character-misae.webp" alt="Misae">
                     <h3>Misae Nohara</h3>
                     <div class="subtitle">(Mom)</div>
                     <p>Shinchan's short-tempered but loving mother, always trying to keep him in line.</p>
                 </div>
                 <div class="character-card">
-                    <img src="assets/_character-hiroshi.webp" alt="Hiroshi">
+                    <img src="assets/character-hiroshi.webp" alt="Hiroshi">
                     <h3>Hiroshi Nohara</h3>
                     <div class="subtitle">(Dad)</div>
                     <p>The laid-back father who works at a company and enjoys his evening beer.</p>
                 </div>
             </div>
 
-            <!-- Row 2: Himawari, Shiro, Kazama -->
             <div class="character-row">
                 <div class="character-card">
-                    <img src="assets/_character-himawari.png" alt="Himawari">
+                    <img src="assets/character-himawari.png" alt="Himawari">
                     <h3>Himawari</h3>
                     <div class="subtitle">(Sister)</div>
                     <p>The youngest of the Noharas. Loves shiny objects and brandname goods. Smiles sideways, like Shinchan.</p>
                 </div>
                 <div class="character-card">
-                    <img src="assets/_character-shiro.png" alt="Shiro">
+                    <img src="assets/character-shiro.png" alt="Shiro">
                     <h3>Yukino Nohara</h3>
                     <div class="subtitle">(Shiro)</div>
                     <p>The family dog — small, fluffy, and sometimes the most sensible member of the household.</p>
                 </div>
                 <div class="character-card">
-                    <img src="assets/_character-toru-kazama.webp" alt="Kazama">
+                    <img src="assets/character-toru-kazama.webp" alt="Kazama">
                     <h3>Toru Kazama</h3>
                     <div class="subtitle"></div>
                     <p>The smart and responsible friend of Shinchan, often the voice of reason in the group.</p>
@@ -229,27 +261,22 @@
             </div>
         </section>
 
-        <!-- ===== Who's your favorite? Section (PDF Page 2) ===== -->
-        <section class="favorite-section">
+        <!-- Who's your favorite? Section (linked from top nav) -->
+        <section id="favorite" class="favorite-section">
             <h3>Who's your favorite?</h3>
             <form action="#" method="post">
                 <p><strong>Who's your favorite character?</strong></p>
                 <div class="radio-group">
                     <input type="radio" id="fav-shinchan" name="favorite" value="shinchan">
                     <label for="fav-shinchan">Shinchan</label>
-                    
                     <input type="radio" id="fav-mom" name="favorite" value="mom">
                     <label for="fav-mom">Mom</label>
-                    
                     <input type="radio" id="fav-dad" name="favorite" value="dad">
                     <label for="fav-dad">Dad</label>
-                    
                     <input type="radio" id="fav-himawari" name="favorite" value="himawari">
                     <label for="fav-himawari">Himawari</label>
-                    
                     <input type="radio" id="fav-shiro" name="favorite" value="shiro">
                     <label for="fav-shiro">Shiro</label>
-                    
                     <input type="radio" id="fav-kazama" name="favorite" value="kazama">
                     <label for="fav-kazama">Kazama</label>
                 </div>
@@ -266,7 +293,7 @@
             </form>
         </section>
 
-        <!-- ===== Tell us a bit more about yourself Section (PDF Page 2) ===== -->
+        <!-- Tell us a bit more about yourself -->
         <section class="favorite-section">
             <h3>Tell us a bit more about yourself</h3>
             <form action="#" method="post">
@@ -295,10 +322,11 @@
             </form>
         </section>
 
-        <!-- ===== Footer (PDF Page 2) ===== -->
+        <!-- Footer with email link -->
         <footer>
             <p>© 2025 Programming4</p>
-            <p>Get in touch with us: shinnchan-lovers@justlearninghtml.com</p>
+            <p>Get in touch with us: <a href="mailto:shinnchan-lovers@justlearninghtml.com">shinnchan-lovers@justlearninghtml.com</a></p>
+            <p><a href="#" style="color:#ff6600;">Back to Top</a></p>
         </footer>
     </div>
 </body>
