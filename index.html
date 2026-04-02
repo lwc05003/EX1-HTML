@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shinchan Fan Site</title>
+    <style>
+        /* Simple reset for better readability - not required but helpful */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header, nav, main, section, article, footer {
+            display: block;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            background-color: #ffcc00;
+            padding: 10px 20px;
+        }
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+        .character-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        article {
+            background: #fff;
+            border-radius: 8px;
+            padding: 10px;
+            text-align: center;
+            width: 180px;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #ffcc00;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <img src="assets/images/logo.png" alt="Shinchan Logo" width="150">
+            <h1>Shinchan Fan Site</h1>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Characters</a></li>
+                <li><a href="#">Episodes</a></li>
+                <li><a href="#">Merchandise</a></li>
+                <li><a href="#">Fan Survey</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container">
+            <!-- Hero Section -->
+            <section id="hero">
+                <img src="assets/images/hero.jpg" alt="Shinchan and friends" style="width:100%; border-radius:8px;">
+                <!-- Optional video: if you have a video in assets/videos/ -->
+                <!-- 
+                <video controls autoplay muted>
+                    <source src="assets/videos/intro.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                -->
+            </section>
+
+            <!-- Characters Section -->
+            <section>
+                <h2>Main Characters</h2>
+                <div class="character-grid">
+                    <article>
+                        <img src="assets/images/shinchan.png" alt="Shinnosuke Nohara" width="150">
+                        <h3>Shinnosuke Nohara</h3>
+                        <p>5 years old, mischievous but kind-hearted.</p>
+                    </article>
+                    <article>
+                        <img src="assets/images/hiroshi.png" alt="Hiroshi Nohara" width="150">
+                        <h3>Hiroshi Nohara</h3>
+                        <p>Shinchan's father, works as a salaryman.</p>
+                    </article>
+                    <article>
+                        <img src="assets/images/misae.png" alt="Misae Nohara" width="150">
+                        <h3>Misae Nohara</h3>
+                        <p>Shinchan's mother, strict but loving.</p>
+                    </article>
+                    <article>
+                        <img src="assets/images/shiro.png" alt="Shiro" width="150">
+                        <h3>Shiro</h3>
+                        <p>The family dog, very smart.</p>
+                    </article>
+                </div>
+            </section>
+
+            <!-- TV Schedule Table with colspan -->
+            <section>
+                <h2>TV Broadcast Schedule</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Time</th>
+                            <th>Monday</th>
+                            <th>Tuesday</th>
+                            <th>Wednesday</th>
+                            <th>Thursday</th>
+                            <th>Friday</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>19:00 - 19:30</td>
+                            <td colspan="5" style="text-align:center;">Shinchan (New Episode)</td>
+                        </tr>
+                        <tr>
+                            <td>21:00 - 21:30</td>
+                            <td>Rebroadcast</td>
+                            <td>Rebroadcast</td>
+                            <td>Special</td>
+                            <td>Rebroadcast</td>
+                            <td>Rebroadcast</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p><em>Note: The first row uses <code>colspan="5"</code> to merge all weekday columns.</em></p>
+            </section>
+
+            <!-- Fan Survey Form with radio buttons -->
+            <section>
+                <h2>Fan Survey</h2>
+                <form action="#" method="post">
+                    <fieldset>
+                        <legend>Who is your favorite character?</legend>
+                        <label>
+                            <input type="radio" name="favorite" value="shinchan"> Shinnosuke Nohara
+                        </label><br>
+                        <label>
+                            <input type="radio" name="favorite" value="hiroshi"> Hiroshi Nohara
+                        </label><br>
+                        <label>
+                            <input type="radio" name="favorite" value="misae"> Misae Nohara
+                        </label><br>
+                        <label>
+                            <input type="radio" name="favorite" value="shiro"> Shiro
+                        </label>
+                    </fieldset>
+
+                    <p>
+                        <label for="suggestions">Any suggestions for the site?</label><br>
+                        <textarea id="suggestions" name="suggestions" rows="3" cols="50"></textarea>
+                    </p>
+
+                    <button type="submit">Submit Survey</button>
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Shinchan Fan Site | For educational purposes only.</p>
+        </div>
+    </footer>
+</body>
+</html>
