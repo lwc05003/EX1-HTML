@@ -22,7 +22,10 @@
             padding: 20px;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
         }
-        .top-banner-text {
+        .center-text {
+            text-align: center;
+        }
+        .top-links {
             text-align: center;
             font-size: 14px;
             color: #888;
@@ -42,6 +45,11 @@
             font-style: italic;
             color: #666;
             margin-bottom: 30px;
+        }
+        .hero-image {
+            width: 100%;
+            border-radius: 10px;
+            margin: 20px 0;
         }
         video {
             width: 100%;
@@ -149,33 +157,30 @@
             font-size: 12px;
             color: #888;
         }
-        .center-text {
-            text-align: center;
-        }
-        .inline-input {
-            display: inline;
-        }
     </style>
 </head>
 <body>
     <div class="container">
-        <!-- Top banner text exactly as PDF -->
-        <div class="top-banner-text">
+        <!-- ===== PDF Page 1 Top: Centered text ===== -->
+        <div class="top-links">
             Shinchan: Shiro and the Coal Town Game | Characters | Who's your favorite?
         </div>
         <hr>
 
-        <!-- Title -->
+        <!-- ===== Title Section ===== -->
         <h1>Shinchan: Shiro and the Coal Town</h1>
         <div class="availability">(Available on: Nintendo Switch and Windows PC)</div>
 
-        <!-- Video Section (from your assets) -->
+        <!-- ===== Hero Image (PDF Page 1 shows an image here before the characters) ===== -->
+        <img class="hero-image" src="assets/_shin-chan-banner.jpg" alt="Shinchan Banner">
+
+        <!-- ===== Video Section (from your assets) ===== -->
         <video controls poster="assets/_shinchan-coal-town-poster.jpg">
             <source src="assets/_shinchan-and-the-coal-town.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
 
-        <!-- The Characters Section -->
+        <!-- ===== The Characters Section ===== -->
         <section class="characters-section">
             <h2>The Characters</h2>
 
@@ -224,7 +229,7 @@
             </div>
         </section>
 
-        <!-- Who's your favorite? Section -->
+        <!-- ===== Who's your favorite? Section (PDF Page 2) ===== -->
         <section class="favorite-section">
             <h3>Who's your favorite?</h3>
             <form action="#" method="post">
@@ -261,7 +266,7 @@
             </form>
         </section>
 
-        <!-- Tell us a bit more about yourself Section -->
+        <!-- ===== Tell us a bit more about yourself Section (PDF Page 2) ===== -->
         <section class="favorite-section">
             <h3>Tell us a bit more about yourself</h3>
             <form action="#" method="post">
@@ -290,7 +295,7 @@
             </form>
         </section>
 
-        <!-- Footer -->
+        <!-- ===== Footer (PDF Page 2) ===== -->
         <footer>
             <p>© 2025 Programming4</p>
             <p>Get in touch with us: shinnchan-lovers@justlearninghtml.com</p>
